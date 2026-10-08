@@ -1,0 +1,20 @@
+DIGITAL PRO — TARJETA VIRTUAL
+
+Esta versión incluye 16 invitaciones. Se retiró SORPRESA.
+
+PARA SUBIR A GITHUB
+1. Descomprime el ZIP.
+2. Sube index.html, style.css, app.js, .nojekyll y la carpeta assets a la raíz de tu repositorio. Conserva la carpeta assets con todas sus imágenes.
+3. Activa GitHub Pages para publicar desde la rama que contiene los archivos y la carpeta raíz.
+4. Abre el enlace que GitHub Pages te proporcione.
+
+No requiere instalación ni compilación. También puedes abrir index.html en tu navegador para revisar la tarjeta.
+
+CONTACTO
+WhatsApp: +591 79352293
+
+EDICIÓN
+app.js: nombres, categorías y enlaces de invitaciones.
+index.html: textos y contacto.
+style.css: colores y diseño.
+assets: logo e imágenes.
