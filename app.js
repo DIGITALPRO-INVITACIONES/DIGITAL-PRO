@@ -20,8 +20,9 @@ const categories=['Todas',...new Set(projects.map(p=>p[2]))];
 const filters=document.querySelector('.filters'),gallery=document.querySelector('#gallery');
 function render(category){
 const shown=projects.filter(p=>category==='Todas'||p[2]===category);
-gallery.innerHTML=shown.map(([repo,name,type,image,tone,fit])=>'<a class="project" href="https://digitalpro-invitaciones.github.io/'+repo+'/" target="_blank" rel="noopener" aria-label="Ver invitación de '+name+' (abre en otra pestaña)">'+(image?'<div class="cover '+(fit||'')+'" style="--tone:'+tone+'"><img src="assets/'+image+'" alt="" loading="lazy" width="600" height="450"></div>':'<div class="cover typographic" style="--tone:'+tone+';--text:'+(repo==='GRADUACION-ESTEFANIA'?'#d5f0d9':'#564f50')+'"><small>'+type+'</small><strong>'+name+'</strong><em>UNA INVITACIÓN ESPECIAL</em></div>')+'<div class="project-info"><small>'+type+'</small><h3>'+name+'</h3><span>Ver invitación</span></div></a>').join('');
+gallery.innerHTML=shown.map(([repo,name,type,image,tone,fit])=>'<a class="project" href="https://digitalpro-invitaciones.github.io/'+repo+'/" target="_blank" rel="noopener" aria-label="Ver invitación de '+name+' (abre en otra pestaña)">'+(image?'<div class="cover '+(fit||'')+'" style="--tone:'+tone+'"><img src="assets/'+image+'" alt="" loading="lazy" width="600" height="450"></div>':'<div class="cover typographic" style="--tone:'+tone+';--text:'+(repo==='GRADUACION-ESTEFANIA'?'#d5f0d9':'#564f50')+'"><small>'+type+'</small><strong>'+name+'</strong><em>UNA INVITACIÓN ESPECIAL</em></div>')+'<div class="project-info"><small>'+type+'</small><h3>'+name+'</h3><span>Abrir invitación</span></div></a>').join('');
 document.querySelector('#count').textContent=shown.length+' invitaciones para explorar';
 filters.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.textContent===category?'true':'false'));
 }
 categories.forEach(category=>{const b=document.createElement('button');b.type='button';b.textContent=category;b.addEventListener('click',()=>render(category));filters.append(b)});render('Todas');
+
